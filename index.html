@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bopl</title>
+    <style>
+        @font-face {
+            font-family: boplbopl;
+            src: url('./SF\ Arch\ Rival\ Bold.ttf');
+        }
+
+        body {
+            word-wrap: break-word;
+        }
+
+        .bopl {
+            font-size: 11px;
+            font-family: boplbopl;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        document.body.innerHTML += `<bopl class="bopl" bopl="bopl"></bopl>`
+        setInterval(() => {
+            for (var i = 0; i < 10; i++) {
+                document.querySelector('bopl').innerText += "bopl\u00A0"
+                window.scrollTo(0, document.body.scrollHeight);
+            }
+        }, 1)
+    </script>
+</body>
+</html>
